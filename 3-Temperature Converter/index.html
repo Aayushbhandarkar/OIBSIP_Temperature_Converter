@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="converter-container">
+        <h1>Temperature Converter</h1>
+        
+        <div class="input-group">
+            <label for="temperature-input">Enter Temperature:</label>
+            <input type="number" id="temperature-input" placeholder="e.g. 32" step="0.01">
+            <div class="error-message" id="error-message"></div>
+        </div>
+        
+        <div class="radio-group">
+            <p>Convert from:</p>
+            <div class="radio-options">
+                <label>
+                    <input type="radio" name="from-unit" value="celsius" checked>
+                    <span>°C (Celsius)</span>
+                </label>
+                <label>
+                    <input type="radio" name="from-unit" value="fahrenheit">
+                    <span>°F (Fahrenheit)</span>
+                </label>
+                <label>
+                    <input type="radio" name="from-unit" value="kelvin">
+                    <span>K (Kelvin)</span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="radio-group">
+            <p>Convert to:</p>
+            <div class="radio-options">
+                <label>
+                    <input type="radio" name="to-unit" value="celsius">
+                    <span>°C (Celsius)</span>
+                </label>
+                <label>
+                    <input type="radio" name="to-unit" value="fahrenheit" checked>
+                    <span>°F (Fahrenheit)</span>
+                </label>
+                <label>
+                    <input type="radio" name="to-unit" value="kelvin">
+                    <span>K (Kelvin)</span>
+                </label>
+            </div>
+        </div>
+        
+        <button id="convert-btn">Convert</button>
+        
+        <div class="result-container" id="result-container">
+            <div class="result-value" id="result-value">--</div>
+            <div class="result-unit" id="result-unit">°F</div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
